@@ -24,6 +24,7 @@ import com.netsuite.webservices.platform.core_2010_2.types.SearchRecordType;
 
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -147,8 +148,19 @@ public class FilterExpressionBuilder
     {
         PropertyDescriptor descriptor = newDescriptor("operator", attribute);
         descriptor.getWriteMethod().invoke(attribute,
-            invokeExactStaticMethod(descriptor.getPropertyType(), "fromValue", operationName));
+            parseOperation(operationName, descriptor));
     }
+
+	private Object parseOperation(String operationName,
+			PropertyDescriptor descriptor) {
+		try {
+			return invokeExactStaticMethod(descriptor.getPropertyType(), "fromValue", operationName);
+		} catch (Exception e) {
+			throw new IllegalArgumentException(String.format(
+					"Unsupported operation %s for operator type %s",
+					operationName, descriptor.getPropertyType().getSimpleName()));
+		}
+	}
 
     private Object addAttribute(String attributeName, SearchRecord attributeGroup) throws Exception
     {
@@ -172,8 +184,15 @@ public class FilterExpressionBuilder
     private void convertAndSet(Object argument, String propertyName, Object attribute) throws Exception
     {
         PropertyDescriptor descriptor = newDescriptor(propertyName, attribute);
-        descriptor.getWriteMethod().invoke(attribute,
-            convert(argument, descriptor.getPropertyType(), attribute.getClass()));
+        
+        try{
+        	descriptor.getWriteMethod().invoke(attribute,
+        			convert(argument, descriptor.getPropertyType(), attribute.getClass()));
+        } catch(Exception e) {
+			throw new IllegalArgumentException(String.format(
+					"Can not set property %s of object %s with value %s",
+					propertyName, attribute, argument), e);
+        }
     }
 
     private Object convert(Object argument, Class<?> propertyType, Class<?> attributeClass)

@@ -39,6 +39,9 @@ import org.junit.Test;
  */
 public class FilterExpressionParserUnitTest
 {
+	@Rule
+	public ExpectedException thrown = ExpectedException.none();
+	
     @Test
     public void testNullOrEmptyExpression() throws Exception
     {
@@ -124,15 +127,31 @@ public class FilterExpressionParserUnitTest
         FilterExpressionParser.parse(SearchRecordType.CUSTOMER, "between(consolDaysOverdue, 10, 62)");
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testBadAttribute() throws Exception
     {
+    	thrown.expect(IllegalArgumentException.class);
+    	thrown.expectMessage("Invallid property consolOverdue for class CustomerSearchBasic");
+    	
         FilterExpressionParser.parse(SearchRecordType.CUSTOMER, "between(consolOverdue, 10, 62)");
     }
+    
+    @Test
+    public void testBadAttributeType() throws Exception
+    {
+    	thrown.expect(IllegalArgumentException.class);
+    	thrown.expectMessage("Can not set property searchValue of class SearchDateField with value 'hello'");
+    	
+    	FilterExpressionParser.parse(SearchRecordType.CUSTOMER,
+                "greaterThan(file.modified, 'hello')");
+    }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testBadSyntax() throws Exception
     {
+    	thrown.expect(IllegalArgumentException.class);
+    	thrown.expectMessage("Syntax error in date expression foobar");
+    	
         FilterExpressionParser.parse(SearchRecordType.CUSTOMER, "foobar");
     }
 
