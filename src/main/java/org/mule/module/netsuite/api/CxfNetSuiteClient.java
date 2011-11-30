@@ -13,7 +13,7 @@ package org.mule.module.netsuite.api;
 import org.mule.module.netsuite.api.model.entity.RecordId;
 import org.mule.module.netsuite.api.model.entity.RecordReference;
 import org.mule.module.netsuite.api.model.expression.date.DateExpression;
-import org.mule.module.netsuite.api.model.expression.filter.FilterExpressionParser;
+import org.mule.module.netsuite.api.model.expression.filter.parser.FilterExpressionParser;
 import org.mule.module.netsuite.api.paging.AsyncRecordSearchIterable;
 import org.mule.module.netsuite.api.paging.RecordSearchIterable;
 import org.mule.module.netsuite.api.paging.SavedRecordSearchIterable;

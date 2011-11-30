@@ -2,8 +2,9 @@ options {
    STATIC = false ;
 }
 PARSER_BEGIN(DateExpressionParser)
-    package org.mule.module.netsuite.api.model.expression.date;
+    package org.mule.module.netsuite.api.model.expression.date.parser;
     import com.netsuite.webservices.platform.core_2010_2.SearchDateField;
+    import org.mule.module.netsuite.api.model.expression.date.*;
     import  java.io.ByteArrayInputStream;
 
    /**

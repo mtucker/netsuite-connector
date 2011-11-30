@@ -11,7 +11,7 @@
 package org.mule.module.netsuite.api.paging;
 
 import org.mule.module.netsuite.api.CxfPortProvider;
-import org.mule.module.netsuite.api.model.expression.filter.FilterExpressionParser;
+import org.mule.module.netsuite.api.model.expression.filter.parser.FilterExpressionParser;
 
 import com.netsuite.webservices.platform.core_2010_2.SearchResult;
 import com.netsuite.webservices.platform.core_2010_2.types.SearchRecordType;

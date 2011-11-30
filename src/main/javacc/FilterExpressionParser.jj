@@ -2,10 +2,11 @@ options {
    STATIC = false ;
 }
 PARSER_BEGIN(FilterExpressionParser)
-    package org.mule.module.netsuite.api.model.expression.filter;
+    package org.mule.module.netsuite.api.model.expression.filter.parser;
+    import org.mule.module.netsuite.api.model.expression.filter.*;
     import com.netsuite.webservices.platform.core_2010_2.*;
     import com.netsuite.webservices.platform.core_2010_2.types.*;
-    import  java.io.ByteArrayInputStream;
+    import java.io.ByteArrayInputStream;
     import org.apache.commons.lang.*;
     import java.util.*;
 

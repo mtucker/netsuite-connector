@@ -190,8 +190,8 @@ public class FilterExpressionBuilder
         			convert(argument, descriptor.getPropertyType(), attribute.getClass()));
         } catch(Exception e) {
 			throw new IllegalArgumentException(String.format(
-					"Can not set property %s of object %s with value %s",
-					propertyName, attribute, argument), e);
+					"Can not set property %s of class %s with value %s",
+					propertyName, attribute.getClass().getSimpleName(), argument), e);
         }
     }
 
