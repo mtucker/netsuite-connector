@@ -15,6 +15,7 @@
 package org.mule.module.netsuite;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
+import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
@@ -62,7 +63,146 @@ public class NetSuiteTestDriver
         connector.setRoleId("3");
         connector.init();
     }
-    
+
+    @Test
+    public void findEmployee() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.EMPLOYEE, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findCustomer() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.CUSTOMER, "is(firstName, 'lala')").iterator().hasNext();
+    }
+
+    @Test
+    public void findAccountingPeriod() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.ACCOUNTING_PERIOD, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findAccount() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.ACCOUNT, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findBin() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.BIN, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findBudget() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.BUDGET, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findCalendarEvent() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.CALENDAR_EVENT, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findCampaign() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.CAMPAIGN, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findClassification() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.CLASSIFICATION, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findDepartment() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.DEPARTMENT, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findFolder() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.FOLDER, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findContact() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.CONTACT, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findVendor() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.VENDOR, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findTask() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.TASK, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findSubsidiary() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.SUBSIDIARY, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findJob() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.JOB, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findIssue() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.ISSUE, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findItem() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.ITEM, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findMessage() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.MESSAGE, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findLocation() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.LOCATION, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findSolution() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.SOLUTION, null).iterator().hasNext();
+    }
+
+    @Test
+    public void findNote() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.NOTE, null).iterator().hasNext();
+    }
+
+
+    @Test
+    public void findOpportunity() throws Exception
+    {
+        connector.findRecords(SearchRecordTypeEnum.OPPORTUNITY, null).iterator().hasNext();
+    }
+
     /**
      * Tests searching using multi enum selects
      */
@@ -75,7 +215,7 @@ public class NetSuiteTestDriver
         RecordRef ref = createEmployeeJohnDoe();
         try
         {
-            assertEquals(1, 
+            assertEquals(1,
                 getLength(connector.findRecords(SearchRecordTypeEnum.EMPLOYEE, "anyOf(internalId, [ internal('" + ref.getInternalId() + "') ] )")));
         }
         finally
@@ -83,6 +223,8 @@ public class NetSuiteTestDriver
             connector.deleteRecord(RecordTypeEnum.EMPLOYEE, ref.getInternalId(), RecordIdType.INTERNAL);
         }
     }
+
+
 
     /**
      * Tests searching using multi enum selects. This tests assumes there are
@@ -94,8 +236,8 @@ public class NetSuiteTestDriver
         int length = getLength(connector.findRecords(SearchRecordTypeEnum.EMPLOYEE, null));
         assertTrue(length > 0);
 
-        assertEquals(length, // 
-            getLength(connector.findRecords(SearchRecordTypeEnum.EMPLOYEE, "noneOf(globalSubscriptionStatus, [ _softOptIn, _confirmedOptOut ])")) +  
+        assertEquals(length, //
+            getLength(connector.findRecords(SearchRecordTypeEnum.EMPLOYEE, "noneOf(globalSubscriptionStatus, [ _softOptIn, _confirmedOptOut ])")) +
             getLength(connector.findRecords(SearchRecordTypeEnum.EMPLOYEE, "anyOf(globalSubscriptionStatus, [ _softOptIn, _confirmedOptOut ])")));
     }
 
@@ -258,7 +400,7 @@ public class NetSuiteTestDriver
         Date serverTime = connector.GetServerTime();
         RecordRef recordRef = createEmployeeJohnDoe();
         connector.deleteRecord(RecordTypeEnum.EMPLOYEE, recordRef.getInternalId(), RecordIdType.INTERNAL);
-        List<Object> deletedRecords = connector.getDeletedRecords(RecordTypeEnum.EMPLOYEE, // 
+        List<Object> deletedRecords = connector.getDeletedRecords(RecordTypeEnum.EMPLOYEE, //
             "after(dateTime('" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(serverTime)
                             + "','yyyy-MM-dd HH:mm:ss'))", null, null, null);
         assertEquals(1, deletedRecords.size());
@@ -301,7 +443,7 @@ public class NetSuiteTestDriver
         }
     }
 
-   
+
 
     @SuppressWarnings("unchecked")
     private int getLength(Iterable<?> results)

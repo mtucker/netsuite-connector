@@ -77,6 +77,11 @@ import com.netsuite.webservices.lists.marketing_2010_2.CampaignSearch;
 import com.netsuite.webservices.lists.marketing_2010_2.CampaignSearchAdvanced;
 import com.netsuite.webservices.lists.marketing_2010_2.PromotionCodeSearch;
 import com.netsuite.webservices.lists.marketing_2010_2.PromotionCodeSearchAdvanced;
+import com.netsuite.webservices.lists.relationships_2010_2.ContactSearch;
+import com.netsuite.webservices.lists.relationships_2010_2.CustomerSearch;
+import com.netsuite.webservices.lists.relationships_2010_2.CustomerSearchAdvanced;
+import com.netsuite.webservices.lists.relationships_2010_2.JobSearch;
+import com.netsuite.webservices.lists.relationships_2010_2.VendorSearch;
 import com.netsuite.webservices.lists.support_2010_2.IssueSearch;
 import com.netsuite.webservices.lists.support_2010_2.IssueSearchAdvanced;
 import com.netsuite.webservices.lists.support_2010_2.SolutionSearch;
@@ -162,9 +167,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for SearchRecord complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="SearchRecord">
  *   &lt;complexContent>
@@ -173,8 +178,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SearchRecord")
@@ -299,6 +304,9 @@ import javax.xml.bind.annotation.XmlType;
     NoteSearchBasic.class,
     TaskSearchBasic.class,
     EmployeeSearch.class,
+    CustomerSearch.class,
+    CustomerSearchAdvanced.class,
+    ContactSearch.class,
     EmployeeSearchAdvanced.class,
     MessageSearch.class,
     NoteSearch.class,
@@ -320,7 +328,9 @@ import javax.xml.bind.annotation.XmlType;
     BudgetSearchAdvanced.class,
     CustomRecordSearch.class,
     CustomListSearch.class,
-    CustomRecordSearchAdvanced.class
+    CustomRecordSearchAdvanced.class,
+    JobSearch.class,
+    VendorSearch.class
 })
 public abstract class SearchRecord {
 

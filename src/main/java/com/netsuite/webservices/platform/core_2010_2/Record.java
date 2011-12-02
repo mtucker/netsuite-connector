@@ -82,6 +82,10 @@ import com.netsuite.webservices.lists.marketing_2010_2.CampaignSearchEngine;
 import com.netsuite.webservices.lists.marketing_2010_2.CampaignSubscription;
 import com.netsuite.webservices.lists.marketing_2010_2.CampaignVertical;
 import com.netsuite.webservices.lists.marketing_2010_2.PromotionCode;
+import com.netsuite.webservices.lists.relationships_2010_2.Contact;
+import com.netsuite.webservices.lists.relationships_2010_2.Customer;
+import com.netsuite.webservices.lists.relationships_2010_2.Job;
+import com.netsuite.webservices.lists.relationships_2010_2.Vendor;
 import com.netsuite.webservices.lists.support_2010_2.Issue;
 import com.netsuite.webservices.lists.support_2010_2.Solution;
 import com.netsuite.webservices.lists.support_2010_2.SupportCase;
@@ -140,9 +144,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for Record complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="Record">
  *   &lt;complexContent>
@@ -154,8 +158,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Record", propOrder = {
@@ -281,7 +285,11 @@ import javax.xml.bind.annotation.XmlType;
     CustomList.class,
     ItemOptionCustomField.class,
     ItemNumberCustomField.class,
-    OtherCustomField.class
+    OtherCustomField.class,
+    Customer.class,
+    Contact.class,
+    Job.class,
+    Vendor.class
 })
 public abstract class Record {
 
@@ -289,11 +297,11 @@ public abstract class Record {
 
     /**
      * Gets the value of the nullFieldList property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link NullField }
-     *     
+     *
      */
     public NullField getNullFieldList() {
         return nullFieldList;
@@ -301,11 +309,11 @@ public abstract class Record {
 
     /**
      * Sets the value of the nullFieldList property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link NullField }
-     *     
+     *
      */
     public void setNullFieldList(NullField value) {
         this.nullFieldList = value;
