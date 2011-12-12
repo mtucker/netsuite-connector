@@ -11,35 +11,45 @@
 package org.mule.module.netsuite.api.model.expression.filter;
 
 import static org.apache.commons.beanutils.MethodUtils.invokeExactStaticMethod;
-import static org.mule.module.netsuite.api.model.expression.Quotes.removeQuotesIfPresent;
-
-import org.mule.module.netsuite.api.model.expression.PropertyAccess;
-import org.mule.module.netsuite.api.model.expression.Quotes;
-
-import com.netsuite.webservices.platform.core_2010_2.RecordRef;
-import com.netsuite.webservices.platform.core_2010_2.SearchEnumMultiSelectField;
-import com.netsuite.webservices.platform.core_2010_2.SearchMultiSelectField;
-import com.netsuite.webservices.platform.core_2010_2.SearchRecord;
-import com.netsuite.webservices.platform.core_2010_2.types.SearchRecordType;
 
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.Date;
 
-import org.apache.commons.beanutils.ConvertUtils;
-import org.apache.commons.collections.Transformer;
-import org.apache.commons.collections.TransformerUtils;
-import org.apache.commons.lang.StringUtils;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+import org.apache.commons.beanutils.ConvertUtilsBean;
+import org.apache.commons.beanutils.Converter;
 import org.apache.commons.lang.UnhandledException;
 import org.apache.commons.lang.Validate;
+import org.joda.time.format.ISODateTimeFormat;
+import org.mule.module.netsuite.api.model.expression.PropertyAccess;
+import org.mule.module.netsuite.api.model.expression.Quotes;
+import org.mule.module.netsuite.api.util.XmlGregorianCalendarFactory;
+
+import com.netsuite.webservices.platform.core_2010_2.SearchRecord;
+import com.netsuite.webservices.platform.core_2010_2.types.SearchRecordType;
 
 public class FilterExpressionBuilder
 {
     private SearchRecord target;
     private SearchRecord basic;
+    private static ConvertUtilsBean convertUtils = new ConvertUtilsBean() { {
+        register(new Converter() {
+            XmlGregorianCalendarFactory f = XmlGregorianCalendarFactory.newInstance();
+            @SuppressWarnings("rawtypes")
+            @Override
+            public Object convert(Class type, Object value)
+            {
+                return f.toXmlCalendar(parse((String) value));
+            }
+            private Date parse(String value)
+            {
+                return ISODateTimeFormat.dateTimeParser().parseDateTime(value).toDate();
+            }
+        }, XMLGregorianCalendar.class);
+    } };
+    
 
     public void setTarget(SearchRecordType targetRecordType)
     {
@@ -197,7 +207,7 @@ public class FilterExpressionBuilder
 
     private Object convert(Object argument, Class<?> propertyType, Class<?> attributeClass)
     {
-        return ConvertUtils.convert(removeQuotesIfPresent(argument), propertyType);
+        return convertUtils.convert(removeQuotesIfPresent(argument), propertyType);
     }
 
     private Object removeQuotesIfPresent(Object argument)
@@ -225,6 +235,11 @@ public class FilterExpressionBuilder
     public SearchRecord build()
     {
         return target;
+    }
+    
+    public static ConvertUtilsBean getConvertUtils()
+    {
+        return convertUtils;
     }
 
 }
