@@ -16,7 +16,7 @@
     <url>http://www.muleforge.org/projects/mule-module-netsuite</url>
 
     <properties>
-        <cxf.version>2.5.0</cxf.version>
+        <cxf.version>2.3.0</cxf.version>
         <sonar.exclusions>com/netsuite/webservices/**,org/mule/module/netsuite/config/**,org/mule/module/netsuite/api/model/expression/**/parser</sonar.exclusions>
     </properties>
 
