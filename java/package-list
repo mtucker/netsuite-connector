@@ -49,7 +49,6 @@ org.mule.module.netsuite.api.model.expression.date.parser
 org.mule.module.netsuite.api.model.expression.filter
 org.mule.module.netsuite.api.model.expression.filter.parser
 org.mule.module.netsuite.api.paging
-org.mule.module.netsuite.api.util
 org.mule.module.netsuite.config
 org.mule.module.netsuite.config.spring
 

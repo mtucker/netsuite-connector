@@ -281,8 +281,6 @@
     <li class="selected api apilevel-">
   <a href="../../../../../../../java/org/mule/module/netsuite/api/paging/package-summary.html">org.mule.module.netsuite.api.paging</a></li>
     <li class="api apilevel-">
-  <a href="../../../../../../../java/org/mule/module/netsuite/api/util/package-summary.html">org.mule.module.netsuite.api.util</a></li>
-    <li class="api apilevel-">
   <a href="../../../../../../../java/org/mule/module/netsuite/config/package-summary.html">org.mule.module.netsuite.config</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../../java/org/mule/module/netsuite/config/spring/package-summary.html">org.mule.module.netsuite.config.spring</a></li>
@@ -297,7 +295,6 @@
       <ul>
           <li class="api apilevel-"><a href="../../../../../../../java/org/mule/module/netsuite/api/paging/AbstractRecordSearchIterable.html">AbstractRecordSearchIterable</a></li>
           <li class="selected api apilevel-"><a href="../../../../../../../java/org/mule/module/netsuite/api/paging/AsyncRecordSearchIterable.html">AsyncRecordSearchIterable</a></li>
-          <li class="api apilevel-"><a href="../../../../../../../java/org/mule/module/netsuite/api/paging/PaginatedIterable.html">PaginatedIterable</a>&lt;T,&nbsp;Page&gt;</li>
           <li class="api apilevel-"><a href="../../../../../../../java/org/mule/module/netsuite/api/paging/RecordSearchIterable.html">RecordSearchIterable</a></li>
           <li class="api apilevel-"><a href="../../../../../../../java/org/mule/module/netsuite/api/paging/SavedRecordSearchIterable.html">SavedRecordSearchIterable</a></li>
       </ul>
@@ -349,22 +346,6 @@
   
   
    
-  
-  
-
-  
-   
-  
-  
-  
-   
-  
-  
-
-  
-   
-  
-  
   
   
 
@@ -456,10 +437,6 @@ Summary:
   
 
   
-  
-  
-
-  
     extends <a href="../../../../../../../java/org/mule/module/netsuite/api/paging/AbstractRecordSearchIterable.html">AbstractRecordSearchIterable</a><br/>
   
   
@@ -480,7 +457,7 @@ Summary:
 
     <tr>
         
-        <td colspan="5" class="jd-inheritance-class-cell">java.lang.Object</td>
+        <td colspan="4" class="jd-inheritance-class-cell">java.lang.Object</td>
     </tr>
     
 
@@ -488,23 +465,11 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
         
-        <td colspan="4" class="jd-inheritance-class-cell">java.util.AbstractCollection&lt;E&gt;</td>
+        <td colspan="3" class="jd-inheritance-class-cell">org.mule.modules.utils.pagination.PaginatedIterable&lt;T,&nbsp;Page&gt;</td>
     </tr>
     
 
     <tr>
-        
-            <td class="jd-inheritance-space">&nbsp;</td>
-        
-            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
-        
-        <td colspan="3" class="jd-inheritance-class-cell"><a href="../../../../../../../java/org/mule/module/netsuite/api/paging/PaginatedIterable.html">org.mule.module.netsuite.api.paging.PaginatedIterable</a>&lt;T,&nbsp;Page&gt;</td>
-    </tr>
-    
-
-    <tr>
-        
-            <td class="jd-inheritance-space">&nbsp;</td>
         
             <td class="jd-inheritance-space">&nbsp;</td>
         
@@ -515,8 +480,6 @@ Summary:
     
 
     <tr>
-        
-            <td class="jd-inheritance-space">&nbsp;</td>
         
             <td class="jd-inheritance-space">&nbsp;</td>
         
@@ -646,43 +609,6 @@ Summary:
 
 
 
-<tr class="api apilevel-" >
-<td colspan="12">
-
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-fields-org.mule.module.netsuite.api.paging.PaginatedIterable" class="jd-expando-trigger closed"
-          ><img id="inherited-fields-org.mule.module.netsuite.api.paging.PaginatedIterable-trigger"
-          src="../../../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>From class
-<a href="../../../../../../../org/mule/module/netsuite/api/paging/PaginatedIterable.html">org.mule.module.netsuite.api.paging.PaginatedIterable</a>
-<div id="inherited-fields-org.mule.module.netsuite.api.paging.PaginatedIterable">
-  <div id="inherited-fields-org.mule.module.netsuite.api.paging.PaginatedIterable-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-fields-org.mule.module.netsuite.api.paging.PaginatedIterable-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
-    
-      <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          private
-          static
-          
-          Logger</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../../org/mule/module/netsuite/api/paging/PaginatedIterable.html#logger">logger</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-</table>
-  </div>
-</div>
-</td></tr>
-
-
-
-
-
 
 
 
@@ -806,9 +732,6 @@ From class
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../../org/mule/module/netsuite/api/paging/AbstractRecordSearchIterable.html#firstPage()">firstPage</a></span>()</nobr>
         
-        <div class="jd-descrdiv">Answers the first page of the paginated result
-</div>
-  
   </td></tr>
 
 
@@ -841,8 +764,6 @@ From class
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../../org/mule/module/netsuite/api/paging/AbstractRecordSearchIterable.html#hasNextPage(com.netsuite.webservices.platform.core_2010_2.SearchResult)">hasNextPage</a></span>(<a href="../../../../../../../java/com/netsuite/webservices/platform/core_2010_2/SearchResult.html">SearchResult</a> result)</nobr>
         
-        <div class="jd-descrdiv">Answers if the given page is not the last one</div>
-  
   </td></tr>
 
 
@@ -859,8 +780,6 @@ From class
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../../org/mule/module/netsuite/api/paging/AbstractRecordSearchIterable.html#nextPage(com.netsuite.webservices.platform.core_2010_2.SearchResult)">nextPage</a></span>(<a href="../../../../../../../java/com/netsuite/webservices/platform/core_2010_2/SearchResult.html">SearchResult</a> currentPage)</nobr>
         
-        <div class="jd-descrdiv">Given a page, answers the next page</div>
-  
   </td></tr>
 
 
@@ -877,8 +796,6 @@ From class
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../../org/mule/module/netsuite/api/paging/AbstractRecordSearchIterable.html#pageIterator(com.netsuite.webservices.platform.core_2010_2.SearchResult)">pageIterator</a></span>(<a href="../../../../../../../java/com/netsuite/webservices/platform/core_2010_2/SearchResult.html">SearchResult</a> page)</nobr>
         
-        <div class="jd-descrdiv">Answers an iterator for the current page</div>
-  
   </td></tr>
 
 
@@ -891,19 +808,19 @@ From class
 
 <tr class="api apilevel-" >
 <td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.module.netsuite.api.paging.PaginatedIterable" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-org.mule.module.netsuite.api.paging.PaginatedIterable-trigger"
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.modules.utils.pagination.PaginatedIterable" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.modules.utils.pagination.PaginatedIterable-trigger"
           src="../../../../../../../assets/images/triangle-closed.png"
           class="jd-expando-trigger-img" /></a>
 From class
 
-  <a href="../../../../../../../org/mule/module/netsuite/api/paging/PaginatedIterable.html">org.mule.module.netsuite.api.paging.PaginatedIterable</a>
+  org.mule.modules.utils.pagination.PaginatedIterable
 
-<div id="inherited-methods-org.mule.module.netsuite.api.paging.PaginatedIterable">
-  <div id="inherited-methods-org.mule.module.netsuite.api.paging.PaginatedIterable-list"
+<div id="inherited-methods-org.mule.modules.utils.pagination.PaginatedIterable">
+  <div id="inherited-methods-org.mule.modules.utils.pagination.PaginatedIterable-list"
         class="jd-inheritedlinks">
   </div>
-  <div id="inherited-methods-org.mule.module.netsuite.api.paging.PaginatedIterable-summary" style="display: none;">
+  <div id="inherited-methods-org.mule.modules.utils.pagination.PaginatedIterable-summary" style="display: none;">
     <table class="jd-sumtable-expando">
     
 
@@ -919,11 +836,8 @@ From class
             Page</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../../org/mule/module/netsuite/api/paging/PaginatedIterable.html#firstPage()">firstPage</a></span>()</nobr>
+        <span class="sympad">firstPage</span>()</nobr>
         
-        <div class="jd-descrdiv">Answers the first page of the paginated result
-</div>
-  
   </td></tr>
 
 
@@ -938,10 +852,8 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../../org/mule/module/netsuite/api/paging/PaginatedIterable.html#hasNextPage(Page)">hasNextPage</a></span>(Page page)</nobr>
+        <span class="sympad">hasNextPage</span>(Page arg0)</nobr>
         
-        <div class="jd-descrdiv">Answers if the given page is not the last one</div>
-  
   </td></tr>
 
 
@@ -954,234 +866,6 @@ From class
             
             
             Iterator&lt;T&gt;</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../../org/mule/module/netsuite/api/paging/PaginatedIterable.html#iterator()">iterator</a></span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            Page</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../../org/mule/module/netsuite/api/paging/PaginatedIterable.html#nextPage(Page)">nextPage</a></span>(Page currentPage)</nobr>
-        
-        <div class="jd-descrdiv">Given a page, answers the next page</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            Iterator&lt;T&gt;</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../../org/mule/module/netsuite/api/paging/PaginatedIterable.html#pageIterator(Page)">pageIterator</a></span>(Page page)</nobr>
-        
-        <div class="jd-descrdiv">Answers an iterator for the current page</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            int</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../../org/mule/module/netsuite/api/paging/PaginatedIterable.html#size()">size</a></span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            Object[]</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../../org/mule/module/netsuite/api/paging/PaginatedIterable.html#toArray()">toArray</a></span>()</nobr>
-        
-        <div class="jd-descrdiv">Hack for enabling collection splitter to work, which forces evaluation of
- whole iterable.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            String</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../../org/mule/module/netsuite/api/paging/PaginatedIterable.html#toString()">toString</a></span>()</nobr>
-        
-        <div class="jd-descrdiv">Same impl that those found in Object, in order to avoid eager elements consumption
-</div>
-  
-  </td></tr>
-
-
-</table>
-  </div>
-</div>
-</td></tr>
-
-
-
-<tr class="api apilevel-" >
-<td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.util.AbstractCollection" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-java.util.AbstractCollection-trigger"
-          src="../../../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>
-From class
-
-  java.util.AbstractCollection
-
-<div id="inherited-methods-java.util.AbstractCollection">
-  <div id="inherited-methods-java.util.AbstractCollection-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-methods-java.util.AbstractCollection-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">add</span>(E arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">addAll</span>(Collection&lt;?&nbsp;extends&nbsp;E&gt; arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">clear</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">contains</span>(Object arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">containsAll</span>(Collection&lt;?&gt; arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">isEmpty</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            Iterator&lt;E&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">iterator</span>()</nobr>
@@ -1192,47 +876,15 @@ From class
 	 
     <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
+            abstract
             
             
             
             
-            
-            boolean</nobr>
+            Page</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">remove</span>(Object arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">removeAll</span>(Collection&lt;?&gt; arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">retainAll</span>(Collection&lt;?&gt; arg0)</nobr>
+        <span class="sympad">nextPage</span>(Page arg0)</nobr>
         
   </td></tr>
 
@@ -1245,58 +897,10 @@ From class
             
             
             
-            int</nobr>
+            Iterator&lt;T&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">size</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            &lt;T&gt;
-            T[]</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">toArray</span>(T[] arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            Object[]</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">toArray</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            String</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">toString</span>()</nobr>
+        <span class="sympad">pageIterator</span>(Page arg0)</nobr>
         
   </td></tr>
 
@@ -1541,272 +1145,6 @@ From interface
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">iterator</span>()</nobr>
-        
-  </td></tr>
-
-
-</table>
-  </div>
-</div>
-</td></tr>
-
-
-
-<tr class="api apilevel-" >
-<td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.util.Collection" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-java.util.Collection-trigger"
-          src="../../../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>
-From interface
-
-  java.util.Collection
-
-<div id="inherited-methods-java.util.Collection">
-  <div id="inherited-methods-java.util.Collection-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-methods-java.util.Collection-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">add</span>(E arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">addAll</span>(Collection&lt;?&nbsp;extends&nbsp;E&gt; arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">clear</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">contains</span>(Object arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">containsAll</span>(Collection&lt;?&gt; arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">equals</span>(Object arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            int</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">hashCode</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">isEmpty</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            Iterator&lt;E&gt;</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">iterator</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">remove</span>(Object arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">removeAll</span>(Collection&lt;?&gt; arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">retainAll</span>(Collection&lt;?&gt; arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            int</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">size</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            &lt;T&gt;
-            T[]</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">toArray</span>(T[] arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            Object[]</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">toArray</span>()</nobr>
         
   </td></tr>
 
