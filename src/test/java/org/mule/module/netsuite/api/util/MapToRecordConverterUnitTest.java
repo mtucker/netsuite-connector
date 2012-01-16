@@ -10,17 +10,18 @@
 
 package org.mule.module.netsuite.api.util;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-
-import com.netsuite.webservices.activities.scheduling_2010_2.CalendarEvent;
-import com.netsuite.webservices.platform.core_2010_2.types.RecordType;
+import static org.junit.Assert.*;
 
 import java.util.Date;
 import java.util.HashMap;
 
 import org.junit.Test;
+import org.mule.modules.utils.mom.CxfMapObjectMappers;
+
+import ar.com.zauber.commons.mom.MapObjectMapper;
+
+import com.netsuite.webservices.activities.scheduling_2010_2.CalendarEvent;
+import com.netsuite.webservices.platform.core_2010_2.types.RecordType;
 
 /**
  * Test for {@link MapToRecordConverter}
@@ -30,9 +31,8 @@ import org.junit.Test;
 @SuppressWarnings("serial")
 public class MapToRecordConverterUnitTest
 {
-    private MapToRecordConverter mapToRecordConverter = new MapToRecordConverter(
-        XmlGregorianCalendarFactory.newInstance());
-
+    private final MapObjectMapper mom = CxfMapObjectMappers.defaultWithPackage("com.netsuite.webservices").build();
+    
     /**
      * Test that a map can be converted into record, applying attribute conversions
      * if necessary
@@ -42,7 +42,7 @@ public class MapToRecordConverterUnitTest
     {
         final String title = "An importat event";
         final String location = "Pekin";
-        CalendarEvent record = (CalendarEvent) mapToRecordConverter.toRecord(RecordType.CALENDAR_EVENT,
+        CalendarEvent record = (CalendarEvent) mom.unmap(
             new HashMap<String, Object>()
             {
                 {
@@ -52,7 +52,7 @@ public class MapToRecordConverterUnitTest
                     put("location", location);
                     put("startDate", new Date());
                 }
-            });
+            }, RecordType.CALENDAR_EVENT.getRecordClass());
 
         assertTrue(record.isSendEmail());
         assertEquals((Long) 2L, record.getPeriod());
@@ -68,7 +68,7 @@ public class MapToRecordConverterUnitTest
     @Test(expected = IllegalArgumentException.class)
     public void testToRecordBadAttribute() throws Exception
     {
-        mapToRecordConverter.toRecord(RecordType.CALENDAR_EVENT,
+        mom.unmap(
             new HashMap<String, Object>()
             {
                 {
@@ -76,6 +76,6 @@ public class MapToRecordConverterUnitTest
                     put("title", "title");
                     put("foobar", "2");
                 }
-            });
+            }, RecordType.CALENDAR_EVENT.getRecordClass());
     }
 }

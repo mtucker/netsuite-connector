@@ -14,15 +14,19 @@
 
 package org.mule.module.netsuite;
 
-import static org.hamcrest.CoreMatchers.instanceOf;
+import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+
+import net.sf.staccatocommons.collections.stream.Streams;
+
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
 import org.mule.api.lifecycle.InitialisationException;
 
 import com.netsuite.webservices.documents.filecabinet_2010_2.types.TextFileEncoding;
@@ -33,20 +37,7 @@ import com.netsuite.webservices.platform.core_2010_2.AsyncStatusResult;
 import com.netsuite.webservices.platform.core_2010_2.Record;
 import com.netsuite.webservices.platform.core_2010_2.RecordRef;
 import com.netsuite.webservices.platform.core_2010_2.types.AsyncStatusType;
-import com.netsuite.webservices.platform.core_2010_2.types.CalendarEventAttendeeResponse;
-import com.netsuite.webservices.platform.core_2010_2.types.GetCustomizationType;
-import com.netsuite.webservices.platform.core_2010_2.types.SearchDateFieldOperator;
 import com.netsuite.webservices.transactions.financial_2010_2.types.BudgetBudgetType;
-
-import java.text.SimpleDateFormat;
-import java.util.Collection;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
 
 @SuppressWarnings("serial")
 public class NetSuiteTestDriver
@@ -443,12 +434,9 @@ public class NetSuiteTestDriver
         }
     }
 
-
-
-    @SuppressWarnings("unchecked")
     private int getLength(Iterable<?> results)
     {
-        return ((Collection) results).toArray().length;
+        return Streams.from(results).size();
     }
 
     /**

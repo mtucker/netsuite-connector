@@ -10,15 +10,16 @@
 
 package org.mule.module.netsuite.api.paging;
 
+import java.util.Iterator;
+
 import org.mule.module.netsuite.api.CxfPortProvider;
 import org.mule.module.netsuite.api.NetSuiteGenericException;
 import org.mule.module.netsuite.api.ResultStatuses;
+import org.mule.modules.utils.pagination.PaginatedIterable;
 
 import com.netsuite.webservices.platform.core_2010_2.Record;
 import com.netsuite.webservices.platform.core_2010_2.SearchResult;
 import com.netsuite.webservices.platform.messages_2010_2.SearchMoreWithIdRequest;
-
-import java.util.Iterator;
 
 /**
  * @author flbulgarelli
@@ -37,6 +38,7 @@ public abstract class AbstractRecordSearchIterable extends PaginatedIterable<Rec
         return portProvider;
     }
 
+    @Override
     protected SearchResult firstPage()
     {
         try

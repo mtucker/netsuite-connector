@@ -17,6 +17,8 @@
 
     <properties>
         <cxf.version>2.3.0</cxf.version>
+        <mom.version>1.2.2</mom.version>
+        <mule.module.utils.version>1.0-beta-2</mule.module.utils.version>
         <sonar.exclusions>com/netsuite/webservices/**,org/mule/module/netsuite/config/**,org/mule/module/netsuite/api/model/expression/**/parser</sonar.exclusions>
     </properties>
 
@@ -47,7 +49,19 @@
             <version>${mule.version}</version>
             <scope>provided</scope>
         </dependency>
+        
+        <dependency>
+            <groupId>com.zaubersoftware</groupId>
+            <artifactId>mom</artifactId>
+            <version>${mom.version}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.mule.modules</groupId>
+            <artifactId>mule-modules-utils</artifactId>
+            <version>${mule.module.utils.version}</version>
+        </dependency>
+        
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-databinding-jaxb</artifactId>

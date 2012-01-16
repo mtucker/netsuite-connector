@@ -10,18 +10,14 @@
 
 package org.mule.module.netsuite.api.model.expression.date;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertSame;
+import static org.junit.Assert.*;
 
+import org.junit.Test;
 import org.mule.module.netsuite.api.model.expression.date.parser.DateExpressionParser;
-import org.mule.module.netsuite.api.util.XmlGregorianCalendarFactory;
 
 import com.netsuite.webservices.platform.core_2010_2.SearchDateField;
 import com.netsuite.webservices.platform.core_2010_2.types.SearchDate;
 import com.netsuite.webservices.platform.core_2010_2.types.SearchDateFieldOperator;
-
-import org.junit.Test;
 
 /**
  * Test for {@link DateExpressionParser}
@@ -83,7 +79,7 @@ public class DateExpressionParserUnitTest
 
     private SearchDateField parse(String expression)
     {
-        return DateExpressionParser.parse(expression, XmlGregorianCalendarFactory.newInstance());
+        return DateExpressionParser.parse(expression);
     }
 
 }
