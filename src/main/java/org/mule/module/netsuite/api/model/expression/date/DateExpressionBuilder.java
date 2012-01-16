@@ -9,13 +9,7 @@
  */
 
 package org.mule.module.netsuite.api.model.expression.date;
-import static org.mule.module.netsuite.api.model.expression.Quotes.removeQuotes;
-
-import org.mule.module.netsuite.api.util.XmlGregorianCalendarFactory;
-
-import com.netsuite.webservices.platform.core_2010_2.SearchDateField;
-import com.netsuite.webservices.platform.core_2010_2.types.SearchDate;
-import com.netsuite.webservices.platform.core_2010_2.types.SearchDateFieldOperator;
+import static org.mule.module.netsuite.api.model.expression.Quotes.*;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -23,15 +17,19 @@ import java.util.Date;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 
+import org.mule.modules.utils.date.XmlGregorianCalendars;
+
+import com.netsuite.webservices.platform.core_2010_2.SearchDateField;
+import com.netsuite.webservices.platform.core_2010_2.types.SearchDate;
+import com.netsuite.webservices.platform.core_2010_2.types.SearchDateFieldOperator;
+
 public class DateExpressionBuilder
 {
     private static final String ISO_DATE_FORMAT = "yyyy-MM-dd";
-    private SearchDateField searchDateField = new SearchDateField();
-    private XmlGregorianCalendarFactory xmlGregorianCalendarFactory;
+    private final SearchDateField searchDateField = new SearchDateField();
 
-    public DateExpressionBuilder(XmlGregorianCalendarFactory xmlGregorianCalendarFactory)
+    public DateExpressionBuilder()
     {
-        this.xmlGregorianCalendarFactory = xmlGregorianCalendarFactory;
     }
 
     public void setOperation(String opertion)
@@ -106,7 +104,7 @@ public class DateExpressionBuilder
 
     public XMLGregorianCalendar toXmlCalendar(Date parse)
     {
-        return xmlGregorianCalendarFactory.toXmlCalendar(parse);
+        return XmlGregorianCalendars.from(parse);
     }
 
 }

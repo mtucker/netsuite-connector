@@ -10,14 +10,13 @@
 
 package org.mule.module.netsuite.api.model.expression.date;
 
-import org.mule.module.netsuite.api.util.XmlGregorianCalendarFactory;
-
-import com.netsuite.webservices.platform.core_2010_2.SearchDateField;
-import com.netsuite.webservices.platform.core_2010_2.types.SearchDateFieldOperator;
-
 import java.util.Date;
 
 import org.apache.commons.lang.Validate;
+import org.mule.modules.utils.date.XmlGregorianCalendars;
+
+import com.netsuite.webservices.platform.core_2010_2.SearchDateField;
+import com.netsuite.webservices.platform.core_2010_2.types.SearchDateFieldOperator;
 
 /**
  * An implementation of {@link DateExpression} that creates {@link SearchDateField}
@@ -39,12 +38,12 @@ public final class SimpleDateExpression implements DateExpression
         this.operator = operator;
     }
 
-    public SearchDateField createSearchDateField(XmlGregorianCalendarFactory calendarFactory)
+    public SearchDateField createSearchDateField()
     {
         SearchDateField searchDateField = new SearchDateField();
         searchDateField.setOperator(operator);
-        searchDateField.setSearchValue(calendarFactory.toXmlCalendar(date));
-        searchDateField.setSearchValue2(calendarFactory.nullSafeToXmlCalendar(date2));
+        searchDateField.setSearchValue(XmlGregorianCalendars.from(date));
+        searchDateField.setSearchValue2(XmlGregorianCalendars.nullSafeFrom(date2));
         return searchDateField;
     }
 }

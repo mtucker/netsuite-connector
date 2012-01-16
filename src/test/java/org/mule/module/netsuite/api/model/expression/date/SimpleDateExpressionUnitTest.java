@@ -10,17 +10,15 @@
 
 package org.mule.module.netsuite.api.model.expression.date;
 
-import static org.junit.Assert.assertThat;
-
-import org.mule.module.netsuite.api.model.expression.date.parser.DateExpressionParser;
-import org.mule.module.netsuite.api.util.XmlGregorianCalendarFactory;
-
-import com.netsuite.webservices.platform.core_2010_2.types.SearchDateFieldOperator;
+import static org.junit.Assert.*;
 
 import java.util.GregorianCalendar;
 
 import org.junit.Test;
 import org.mockito.internal.matchers.apachecommons.ReflectionEquals;
+import org.mule.module.netsuite.api.model.expression.date.parser.DateExpressionParser;
+
+import com.netsuite.webservices.platform.core_2010_2.types.SearchDateFieldOperator;
 
 /**
  * Test for {@link SimpleDateExpression}
@@ -31,10 +29,9 @@ public class SimpleDateExpressionUnitTest
     @Test
     public void test() throws Exception
     {
-        XmlGregorianCalendarFactory factory = XmlGregorianCalendarFactory.newInstance();
         GregorianCalendar calendar = new GregorianCalendar(2010, GregorianCalendar.JANUARY, 10);
         assertThat(
-            new SimpleDateExpression(calendar.getTime(), null, SearchDateFieldOperator.BEFORE).createSearchDateField(factory),
-            new ReflectionEquals(DateExpressionParser.parse("before(isoDate(2010-1-10))", factory)));
+            new SimpleDateExpression(calendar.getTime(), null, SearchDateFieldOperator.BEFORE).createSearchDateField(),
+            new ReflectionEquals(DateExpressionParser.parse("before(isoDate(2010-1-10))")));
     }
 }

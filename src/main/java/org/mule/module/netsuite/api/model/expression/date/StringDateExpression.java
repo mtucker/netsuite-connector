@@ -11,7 +11,6 @@
 package org.mule.module.netsuite.api.model.expression.date;
 
 import org.mule.module.netsuite.api.model.expression.date.parser.DateExpressionParser;
-import org.mule.module.netsuite.api.util.XmlGregorianCalendarFactory;
 
 import com.netsuite.webservices.platform.core_2010_2.SearchDateField;
 
@@ -29,8 +28,8 @@ public final class StringDateExpression implements DateExpression
         this.expression = expression;
     }
 
-    public SearchDateField createSearchDateField(XmlGregorianCalendarFactory calendarFactory)
+    public SearchDateField createSearchDateField()
     {
-        return DateExpressionParser.parse(expression, calendarFactory);
+        return DateExpressionParser.parse(expression);
     }
 }

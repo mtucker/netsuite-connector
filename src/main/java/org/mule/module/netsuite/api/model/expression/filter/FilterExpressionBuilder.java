@@ -10,7 +10,7 @@
 
 package org.mule.module.netsuite.api.model.expression.filter;
 
-import static org.apache.commons.beanutils.MethodUtils.invokeExactStaticMethod;
+import static org.apache.commons.beanutils.MethodUtils.*;
 
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;
@@ -22,10 +22,10 @@ import org.apache.commons.beanutils.ConvertUtilsBean;
 import org.apache.commons.beanutils.Converter;
 import org.apache.commons.lang.UnhandledException;
 import org.apache.commons.lang.Validate;
-import org.joda.time.format.ISODateTimeFormat;
 import org.mule.module.netsuite.api.model.expression.PropertyAccess;
 import org.mule.module.netsuite.api.model.expression.Quotes;
-import org.mule.module.netsuite.api.util.XmlGregorianCalendarFactory;
+import org.mule.modules.utils.date.DateConventions;
+import org.mule.modules.utils.date.XmlGregorianCalendars;
 
 import com.netsuite.webservices.platform.core_2010_2.SearchRecord;
 import com.netsuite.webservices.platform.core_2010_2.types.SearchRecordType;
@@ -36,16 +36,15 @@ public class FilterExpressionBuilder
     private SearchRecord basic;
     private static ConvertUtilsBean convertUtils = new ConvertUtilsBean() { {
         register(new Converter() {
-            XmlGregorianCalendarFactory f = XmlGregorianCalendarFactory.newInstance();
             @SuppressWarnings("rawtypes")
             @Override
             public Object convert(Class type, Object value)
             {
-                return f.toXmlCalendar(parse((String) value));
+                return XmlGregorianCalendars.from(parse((String) value));
             }
             private Date parse(String value)
             {
-                return ISODateTimeFormat.dateTimeParser().parseDateTime(value).toDate();
+                return DateConventions.defaultDateTimeFormat().parseDateTime(value).toDate();
             }
         }, XMLGregorianCalendar.class);
     } };

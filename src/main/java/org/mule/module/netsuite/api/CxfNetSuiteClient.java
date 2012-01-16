@@ -10,6 +10,15 @@
 
 package org.mule.module.netsuite.api;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.validation.constraints.NotNull;
+
+import org.apache.commons.lang.Validate;
 import org.mule.module.netsuite.api.model.entity.RecordId;
 import org.mule.module.netsuite.api.model.entity.RecordReference;
 import org.mule.module.netsuite.api.model.expression.date.DateExpression;
@@ -17,8 +26,10 @@ import org.mule.module.netsuite.api.model.expression.filter.parser.FilterExpress
 import org.mule.module.netsuite.api.paging.AsyncRecordSearchIterable;
 import org.mule.module.netsuite.api.paging.RecordSearchIterable;
 import org.mule.module.netsuite.api.paging.SavedRecordSearchIterable;
-import org.mule.module.netsuite.api.util.MapToRecordConverter;
-import org.mule.module.netsuite.api.util.XmlGregorianCalendarFactory;
+import org.mule.modules.utils.date.XmlGregorianCalendars;
+import org.mule.modules.utils.mom.CxfMapObjectMappers;
+
+import ar.com.zauber.commons.mom.MapObjectMapper;
 
 import com.netsuite.webservices.platform.core_2010_2.AsyncStatusResult;
 import com.netsuite.webservices.platform.core_2010_2.AttachBasicReference;
@@ -64,16 +75,6 @@ import com.netsuite.webservices.platform.messages_2010_2.UpdateInviteeStatusRequ
 import com.netsuite.webservices.platform.messages_2010_2.UpdateRequest;
 import com.netsuite.webservices.platform_2010_2.NetSuitePortType;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.validation.constraints.NotNull;
-
-import org.apache.commons.lang.Validate;
-
 /**
  * Implementation of the {@link SoapNetSuiteClient} that uses CXF generated-based
  * interface
@@ -82,9 +83,8 @@ public class CxfNetSuiteClient implements SoapNetSuiteClient, CxfPortProvider
 {
 
     private final CxfPortProvider portProvider;
-    private final XmlGregorianCalendarFactory xmlGregorianCalendarFactory = XmlGregorianCalendarFactory.newInstance();
-    private final MapToRecordConverter converter = new MapToRecordConverter(xmlGregorianCalendarFactory);
-
+    private final MapObjectMapper mom = CxfMapObjectMappers.defaultWithPackage("com.netsuite.webservices").build();
+    
     public CxfNetSuiteClient(@NotNull CxfPortProvider portProvider)
     {
         Validate.notNull(portProvider);
@@ -134,7 +134,7 @@ public class CxfNetSuiteClient implements SoapNetSuiteClient, CxfPortProvider
 
     private Record createRecord(RecordType recordType, Map<String, Object> recordAttributes) throws Exception
     {
-        return converter.toRecord(recordType, recordAttributes);
+        return (Record) mom.unmap(recordAttributes, recordType.getRecordClass());
     }
 
     public Object attachRecord(@NotNull RecordReference sourceRecord,
@@ -175,7 +175,7 @@ public class CxfNetSuiteClient implements SoapNetSuiteClient, CxfPortProvider
     public Object getDeletedRecords(RecordType type, DateExpression expression) throws Exception
     {
         GetDeletedFilter filter = new GetDeletedFilter();
-        filter.setDeletedDate(expression.createSearchDateField(xmlGregorianCalendarFactory));
+        filter.setDeletedDate(expression.createSearchDateField());
         filter.setType(new SearchEnumMultiSelectField(Arrays.asList(type.value()),
             SearchEnumMultiSelectFieldOperator.ANY_OF));
         return getAuthenticatedPort().getDeleted(new GetDeletedRequest(filter));
@@ -231,7 +231,7 @@ public class CxfNetSuiteClient implements SoapNetSuiteClient, CxfPortProvider
         return getAuthenticatedPort().getItemAvailability(//
             new GetItemAvailabilityRequest(//
                 new ItemAvailabilityFilter(singletonRecordRefList(recordReference),
-                    xmlGregorianCalendarFactory.nullSafeToXmlCalendar(ifModifiedSince))));
+                    XmlGregorianCalendars.nullSafeFrom(ifModifiedSince))));
     }
 
     public Object getSavedSearch(@NotNull RecordType type) throws Exception
