@@ -17,7 +17,7 @@
 
     <properties>
         <cxf.version>2.3.0</cxf.version>
-        <mule.module.utils.version>1.0-SNAPSHOT</mule.module.utils.version>
+        <mule.module.utils.version>1.0</mule.module.utils.version>
         <sonar.exclusions>com/netsuite/webservices/**,org/mule/module/netsuite/config/**,org/mule/module/netsuite/api/model/expression/**/parser</sonar.exclusions>
     </properties>
 
