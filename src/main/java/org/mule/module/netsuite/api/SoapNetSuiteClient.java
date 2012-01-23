@@ -10,12 +10,16 @@
 
 package org.mule.module.netsuite.api;
 
+import java.util.Date;
+import java.util.Map;
+
+import javax.validation.constraints.NotNull;
+
 import org.mule.module.netsuite.api.annotation.NetSuiteOperation;
 import org.mule.module.netsuite.api.annotation.ReturnType;
 import org.mule.module.netsuite.api.model.entity.RecordId;
 import org.mule.module.netsuite.api.model.entity.RecordReference;
 import org.mule.module.netsuite.api.model.expression.date.DateExpression;
-import org.mule.module.netsuite.api.paging.SavedRecordSearchIterable;
 
 import com.netsuite.webservices.platform.core_2010_2.AsyncStatusResult;
 import com.netsuite.webservices.platform.core_2010_2.Record;
@@ -24,13 +28,6 @@ import com.netsuite.webservices.platform.core_2010_2.types.GetCustomizationType;
 import com.netsuite.webservices.platform.core_2010_2.types.InitializeType;
 import com.netsuite.webservices.platform.core_2010_2.types.RecordType;
 import com.netsuite.webservices.platform.core_2010_2.types.SearchRecordType;
-
-import java.util.Date;
-import java.util.Map;
-
-import javax.validation.constraints.NotNull;
-
-import org.apache.commons.lang.Validate;
 
 public interface SoapNetSuiteClient extends NetSuiteClient<Object, Exception, Object>
 {

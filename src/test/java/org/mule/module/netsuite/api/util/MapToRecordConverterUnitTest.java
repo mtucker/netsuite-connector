@@ -18,10 +18,9 @@ import java.util.HashMap;
 import org.junit.Test;
 import org.mule.modules.utils.mom.CxfMapObjectMappers;
 
-import ar.com.zauber.commons.mom.MapObjectMapper;
-
 import com.netsuite.webservices.activities.scheduling_2010_2.CalendarEvent;
 import com.netsuite.webservices.platform.core_2010_2.types.RecordType;
+import com.zauberlabs.commons.mom.MapObjectMapper;
 
 /**
  * Test for {@link MapToRecordConverter}

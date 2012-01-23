@@ -10,12 +10,12 @@
 
 package org.mule.module.netsuite.api.annotation;
 
-import org.mule.module.netsuite.api.SoapNetSuiteClient;
-
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
+
+import org.mule.module.netsuite.api.SoapNetSuiteClient;
 
 /**
  * Metadata of a {@link SoapNetSuiteClient} Method

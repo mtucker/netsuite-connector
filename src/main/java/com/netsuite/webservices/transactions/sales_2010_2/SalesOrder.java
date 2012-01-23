@@ -11,6 +11,14 @@
 
 package com.netsuite.webservices.transactions.sales_2010_2;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
 import com.netsuite.webservices.platform.common_2010_2.BillAddress;
 import com.netsuite.webservices.platform.common_2010_2.ShipAddress;
 import com.netsuite.webservices.platform.common_2010_2.types.AvsMatchCode;
@@ -23,14 +31,6 @@ import com.netsuite.webservices.transactions.sales_2010_2.types.SalesOrderOrderS
 import com.netsuite.webservices.transactions.sales_2010_2.types.TransactionPaymentEventHoldReason;
 import com.netsuite.webservices.transactions.sales_2010_2.types.TransactionPaymentEventResult;
 import com.netsuite.webservices.transactions.sales_2010_2.types.TransactionPaymentEventType;
-
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**

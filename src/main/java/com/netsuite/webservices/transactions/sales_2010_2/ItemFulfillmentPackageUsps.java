@@ -11,12 +11,12 @@
 
 package com.netsuite.webservices.transactions.sales_2010_2;
 
-import com.netsuite.webservices.transactions.sales_2010_2.types.ItemFulfillmentPackageUspsDeliveryConfUsps;
-import com.netsuite.webservices.transactions.sales_2010_2.types.ItemFulfillmentPackageUspsPackagingUsps;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+
+import com.netsuite.webservices.transactions.sales_2010_2.types.ItemFulfillmentPackageUspsDeliveryConfUsps;
+import com.netsuite.webservices.transactions.sales_2010_2.types.ItemFulfillmentPackageUspsPackagingUsps;
 
 
 /**

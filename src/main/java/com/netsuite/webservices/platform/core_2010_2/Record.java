@@ -11,6 +11,11 @@
 
 package com.netsuite.webservices.platform.core_2010_2;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+
 import com.netsuite.webservices.activities.scheduling_2010_2.CalendarEvent;
 import com.netsuite.webservices.activities.scheduling_2010_2.PhoneCall;
 import com.netsuite.webservices.activities.scheduling_2010_2.ProjectTask;
@@ -135,11 +140,6 @@ import com.netsuite.webservices.transactions.sales_2010_2.Invoice;
 import com.netsuite.webservices.transactions.sales_2010_2.ItemFulfillment;
 import com.netsuite.webservices.transactions.sales_2010_2.Opportunity;
 import com.netsuite.webservices.transactions.sales_2010_2.SalesOrder;
-
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**

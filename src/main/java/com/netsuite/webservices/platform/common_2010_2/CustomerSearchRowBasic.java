@@ -11,6 +11,13 @@
 
 package com.netsuite.webservices.platform.common_2010_2;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
 import com.netsuite.webservices.platform.core_2010_2.SearchColumnBooleanField;
 import com.netsuite.webservices.platform.core_2010_2.SearchColumnCustomFieldList;
 import com.netsuite.webservices.platform.core_2010_2.SearchColumnDateField;
@@ -19,13 +26,6 @@ import com.netsuite.webservices.platform.core_2010_2.SearchColumnEnumSelectField
 import com.netsuite.webservices.platform.core_2010_2.SearchColumnLongField;
 import com.netsuite.webservices.platform.core_2010_2.SearchColumnSelectField;
 import com.netsuite.webservices.platform.core_2010_2.SearchColumnStringField;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**

@@ -10,14 +10,14 @@
 
 package org.mule.module.netsuite.api.model.entity;
 
+import javax.validation.constraints.NotNull;
+
+import org.apache.commons.lang.Validate;
+
 import com.netsuite.webservices.platform.core_2010_2.InitializeRef;
 import com.netsuite.webservices.platform.core_2010_2.RecordRef;
 import com.netsuite.webservices.platform.core_2010_2.types.InitializeRefType;
 import com.netsuite.webservices.platform.core_2010_2.types.RecordType;
-
-import javax.validation.constraints.NotNull;
-
-import org.apache.commons.lang.Validate;
 
 public class RecordReference
 {

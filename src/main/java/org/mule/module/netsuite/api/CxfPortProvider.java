@@ -12,8 +12,6 @@ package org.mule.module.netsuite.api;
 
 import com.netsuite.webservices.platform_2010_2.NetSuitePortType;
 
-import java.rmi.RemoteException;
-
 public interface CxfPortProvider
 {
     NetSuitePortType getAuthenticatedPort() throws Exception;

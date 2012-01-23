@@ -10,15 +10,14 @@
 
 package org.mule.module.netsuite.api.paging;
 
+import org.apache.commons.beanutils.PropertyUtils;
+import org.apache.commons.lang.UnhandledException;
 import org.mule.module.netsuite.api.CxfPortProvider;
 
 import com.netsuite.webservices.platform.core_2010_2.SearchRecord;
 import com.netsuite.webservices.platform.core_2010_2.SearchResult;
 import com.netsuite.webservices.platform.core_2010_2.types.SearchRecordType;
 import com.netsuite.webservices.platform.messages_2010_2.SearchRequest;
-
-import org.apache.commons.beanutils.PropertyUtils;
-import org.apache.commons.lang.UnhandledException;
 
 public final class SavedRecordSearchIterable extends AbstractRecordSearchIterable
 {

@@ -11,6 +11,10 @@
 
 package com.netsuite.webservices.lists.marketing_2010_2;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
 import com.netsuite.webservices.platform.common_2010_2.CampaignSearchBasic;
 import com.netsuite.webservices.platform.common_2010_2.EmployeeSearchBasic;
 import com.netsuite.webservices.platform.common_2010_2.EntitySearchBasic;
@@ -21,10 +25,6 @@ import com.netsuite.webservices.platform.common_2010_2.OriginatingLeadSearchBasi
 import com.netsuite.webservices.platform.common_2010_2.PromotionCodeSearchBasic;
 import com.netsuite.webservices.platform.common_2010_2.TransactionSearchBasic;
 import com.netsuite.webservices.platform.core_2010_2.SearchRecord;
-
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**

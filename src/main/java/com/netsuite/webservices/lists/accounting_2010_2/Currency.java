@@ -11,15 +11,15 @@
 
 package com.netsuite.webservices.lists.accounting_2010_2;
 
-import com.netsuite.webservices.lists.accounting_2010_2.types.CurrencyCurrencyPrecision;
-import com.netsuite.webservices.lists.accounting_2010_2.types.CurrencyFxRateUpdateTimezone;
-import com.netsuite.webservices.lists.accounting_2010_2.types.CurrencyLocale;
-import com.netsuite.webservices.platform.core_2010_2.Record;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
+
+import com.netsuite.webservices.lists.accounting_2010_2.types.CurrencyCurrencyPrecision;
+import com.netsuite.webservices.lists.accounting_2010_2.types.CurrencyFxRateUpdateTimezone;
+import com.netsuite.webservices.lists.accounting_2010_2.types.CurrencyLocale;
+import com.netsuite.webservices.platform.core_2010_2.Record;
 
 
 /**

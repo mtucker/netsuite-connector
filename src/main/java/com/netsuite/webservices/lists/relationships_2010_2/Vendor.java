@@ -17,6 +17,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+
 import com.netsuite.webservices.lists.relationships_2010_2.types.EmailPreference;
 import com.netsuite.webservices.platform.common_2010_2.types.GlobalSubscriptionStatus;
 import com.netsuite.webservices.platform.core_2010_2.CustomFieldList;

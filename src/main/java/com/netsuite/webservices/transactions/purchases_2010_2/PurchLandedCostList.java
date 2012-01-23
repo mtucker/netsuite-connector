@@ -11,8 +11,6 @@
 
 package com.netsuite.webservices.transactions.purchases_2010_2;
 
-import com.netsuite.webservices.platform.common_2010_2.LandedCost;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +18,8 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
+
+import com.netsuite.webservices.platform.common_2010_2.LandedCost;
 
 
 /**

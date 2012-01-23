@@ -11,6 +11,10 @@
 
 package com.netsuite.webservices.transactions.sales_2010_2;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
 import com.netsuite.webservices.platform.common_2010_2.CalendarEventSearchBasic;
 import com.netsuite.webservices.platform.common_2010_2.CampaignSearchBasic;
 import com.netsuite.webservices.platform.common_2010_2.ContactSearchBasic;
@@ -26,10 +30,6 @@ import com.netsuite.webservices.platform.common_2010_2.PhoneCallSearchBasic;
 import com.netsuite.webservices.platform.common_2010_2.TaskSearchBasic;
 import com.netsuite.webservices.platform.common_2010_2.TransactionSearchBasic;
 import com.netsuite.webservices.platform.core_2010_2.SearchRecord;
-
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**

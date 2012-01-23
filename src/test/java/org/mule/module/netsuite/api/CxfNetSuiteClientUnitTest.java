@@ -10,11 +10,16 @@
 
 package org.mule.module.netsuite.api;
 
-import static org.mockito.Matchers.argThat;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Matchers.*;
+import static org.mockito.Mockito.*;
 
+import java.util.Arrays;
+import java.util.HashMap;
+
+import org.hamcrest.BaseMatcher;
+import org.hamcrest.Description;
+import org.junit.Before;
+import org.junit.Test;
 import org.mule.module.netsuite.api.model.entity.RecordId;
 import org.mule.module.netsuite.api.model.entity.RecordReference;
 import org.mule.module.netsuite.api.model.expression.date.StringDateExpression;
@@ -37,14 +42,6 @@ import com.netsuite.webservices.platform.messages_2010_2.GetItemAvailabilityRequ
 import com.netsuite.webservices.platform.messages_2010_2.InitializeRequest;
 import com.netsuite.webservices.platform.messages_2010_2.UpdateRequest;
 import com.netsuite.webservices.platform_2010_2.NetSuitePortType;
-
-import java.util.Arrays;
-import java.util.HashMap;
-
-import org.hamcrest.BaseMatcher;
-import org.hamcrest.Description;
-import org.junit.Before;
-import org.junit.Test;
 
 public class CxfNetSuiteClientUnitTest
 {

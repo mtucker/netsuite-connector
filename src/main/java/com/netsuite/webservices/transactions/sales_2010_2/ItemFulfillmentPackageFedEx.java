@@ -11,16 +11,16 @@
 
 package com.netsuite.webservices.transactions.sales_2010_2;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
 import com.netsuite.webservices.transactions.sales_2010_2.types.ItemFulfillmentPackageFedExAdmPackageTypeFedEx;
 import com.netsuite.webservices.transactions.sales_2010_2.types.ItemFulfillmentPackageFedExCodFreightTypeFedEx;
 import com.netsuite.webservices.transactions.sales_2010_2.types.ItemFulfillmentPackageFedExCodMethodFedEx;
 import com.netsuite.webservices.transactions.sales_2010_2.types.ItemFulfillmentPackageFedExDeliveryConfFedEx;
 import com.netsuite.webservices.transactions.sales_2010_2.types.ItemFulfillmentPackageFedExPackagingFedEx;
 import com.netsuite.webservices.transactions.sales_2010_2.types.ItemFulfillmentPackageFedExSignatureOptionsFedEx;
-
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**

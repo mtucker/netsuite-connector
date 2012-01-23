@@ -14,6 +14,7 @@ package com.netsuite.webservices.lists.website_2010_2;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+
 import com.netsuite.webservices.platform.common_2010_2.CustomerSearchBasic;
 import com.netsuite.webservices.platform.common_2010_2.EmployeeSearchBasic;
 import com.netsuite.webservices.platform.common_2010_2.SiteCategorySearchBasic;

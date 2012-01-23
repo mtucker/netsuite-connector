@@ -10,11 +10,6 @@
 
 package org.mule.module.netsuite.api;
 
-import com.netsuite.webservices.platform.core_2010_2.Passport;
-import com.netsuite.webservices.platform.core_2010_2.RecordRef;
-import com.netsuite.webservices.platform.messages_2010_2.LoginRequest;
-import com.netsuite.webservices.platform_2010_2.NetSuitePortType;
-
 import java.rmi.RemoteException;
 
 import javax.validation.constraints.NotNull;
@@ -24,6 +19,11 @@ import org.apache.commons.lang.Validate;
 import org.apache.cxf.interceptor.LoggingInInterceptor;
 import org.apache.cxf.interceptor.LoggingOutInterceptor;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
+
+import com.netsuite.webservices.platform.core_2010_2.Passport;
+import com.netsuite.webservices.platform.core_2010_2.RecordRef;
+import com.netsuite.webservices.platform.messages_2010_2.LoginRequest;
+import com.netsuite.webservices.platform_2010_2.NetSuitePortType;
 
 public class DefaultCxfPortProvider implements CxfPortProvider
 {

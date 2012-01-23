@@ -10,6 +10,11 @@
 
 package org.mule.module.netsuite.api;
 
+import java.util.Date;
+import java.util.Map;
+
+import javax.validation.constraints.NotNull;
+
 import org.mule.module.netsuite.api.model.entity.RecordId;
 import org.mule.module.netsuite.api.model.entity.RecordReference;
 import org.mule.module.netsuite.api.model.expression.date.DateExpression;
@@ -21,11 +26,6 @@ import com.netsuite.webservices.platform.core_2010_2.types.GetCustomizationType;
 import com.netsuite.webservices.platform.core_2010_2.types.InitializeType;
 import com.netsuite.webservices.platform.core_2010_2.types.RecordType;
 import com.netsuite.webservices.platform.core_2010_2.types.SearchRecordType;
-
-import java.util.Date;
-import java.util.Map;
-
-import javax.validation.constraints.NotNull;
 
 /**
  * A NetSuite facade

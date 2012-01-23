@@ -11,13 +11,13 @@
 
 package com.netsuite.webservices.activities.scheduling_2010_2;
 
-import com.netsuite.webservices.activities.scheduling_2010_2.types.CalendarEventAttendeeAttendance;
-import com.netsuite.webservices.platform.core_2010_2.RecordRef;
-import com.netsuite.webservices.platform.core_2010_2.types.CalendarEventAttendeeResponse;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+
+import com.netsuite.webservices.activities.scheduling_2010_2.types.CalendarEventAttendeeAttendance;
+import com.netsuite.webservices.platform.core_2010_2.RecordRef;
+import com.netsuite.webservices.platform.core_2010_2.types.CalendarEventAttendeeResponse;
 
 
 /**

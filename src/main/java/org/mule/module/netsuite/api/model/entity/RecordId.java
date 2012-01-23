@@ -10,12 +10,12 @@
 
 package org.mule.module.netsuite.api.model.entity;
 
-import com.netsuite.webservices.platform.core_2010_2.InitializeRef;
-import com.netsuite.webservices.platform.core_2010_2.RecordRef;
-
 import java.util.Map;
 
 import org.apache.commons.lang.Validate;
+
+import com.netsuite.webservices.platform.core_2010_2.InitializeRef;
+import com.netsuite.webservices.platform.core_2010_2.RecordRef;
 
 public interface RecordId
 {

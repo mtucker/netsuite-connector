@@ -11,6 +11,12 @@
 
 package com.netsuite.webservices.platform.core_2010_2.types;
 
+import javax.xml.bind.annotation.XmlEnum;
+import javax.xml.bind.annotation.XmlEnumValue;
+import javax.xml.bind.annotation.XmlType;
+
+import org.apache.commons.lang.UnhandledException;
+
 import com.netsuite.webservices.activities.scheduling_2010_2.CalendarEventSearch;
 import com.netsuite.webservices.activities.scheduling_2010_2.CalendarEventSearchAdvanced;
 import com.netsuite.webservices.activities.scheduling_2010_2.PhoneCallSearch;
@@ -89,14 +95,6 @@ import com.netsuite.webservices.transactions.sales_2010_2.OpportunitySearch;
 import com.netsuite.webservices.transactions.sales_2010_2.OpportunitySearchAdvanced;
 import com.netsuite.webservices.transactions.sales_2010_2.TransactionSearch;
 import com.netsuite.webservices.transactions.sales_2010_2.TransactionSearchAdvanced;
-
-import java.nio.channels.UnsupportedAddressTypeException;
-
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
-
-import org.apache.commons.lang.UnhandledException;
 
 
 /**

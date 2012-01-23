@@ -11,12 +11,12 @@
 
 package com.netsuite.webservices.platform.messages_2010_2;
 
-import com.netsuite.webservices.platform.core_2010_2.Passport;
-
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
+
+import com.netsuite.webservices.platform.core_2010_2.Passport;
 
 
 /**

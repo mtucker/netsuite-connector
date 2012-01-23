@@ -10,14 +10,12 @@
 
 package org.mule.module.netsuite;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
+
+import org.junit.Test;
 
 import com.netsuite.webservices.platform.core_2010_2.RecordRef;
 import com.netsuite.webservices.platform.core_2010_2.types.RecordType;
-
-import org.junit.Test;
 
 /**
  * Test for {@link RecordReferences}

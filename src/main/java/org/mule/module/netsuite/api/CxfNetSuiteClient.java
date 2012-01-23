@@ -29,8 +29,6 @@ import org.mule.module.netsuite.api.paging.SavedRecordSearchIterable;
 import org.mule.modules.utils.date.XmlGregorianCalendars;
 import org.mule.modules.utils.mom.CxfMapObjectMappers;
 
-import ar.com.zauber.commons.mom.MapObjectMapper;
-
 import com.netsuite.webservices.platform.core_2010_2.AsyncStatusResult;
 import com.netsuite.webservices.platform.core_2010_2.AttachBasicReference;
 import com.netsuite.webservices.platform.core_2010_2.AttachContactReference;
@@ -74,6 +72,7 @@ import com.netsuite.webservices.platform.messages_2010_2.InitializeRequest;
 import com.netsuite.webservices.platform.messages_2010_2.UpdateInviteeStatusRequest;
 import com.netsuite.webservices.platform.messages_2010_2.UpdateRequest;
 import com.netsuite.webservices.platform_2010_2.NetSuitePortType;
+import com.zauberlabs.commons.mom.MapObjectMapper;
 
 /**
  * Implementation of the {@link SoapNetSuiteClient} that uses CXF generated-based

@@ -11,6 +11,10 @@
 
 package com.netsuite.webservices.activities.scheduling_2010_2;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
 import com.netsuite.webservices.platform.common_2010_2.EmployeeSearchRowBasic;
 import com.netsuite.webservices.platform.common_2010_2.JobSearchRowBasic;
 import com.netsuite.webservices.platform.common_2010_2.NoteSearchRowBasic;
@@ -18,10 +22,6 @@ import com.netsuite.webservices.platform.common_2010_2.ProjectTaskAssignmentSear
 import com.netsuite.webservices.platform.common_2010_2.ProjectTaskSearchRowBasic;
 import com.netsuite.webservices.platform.common_2010_2.TimeBillSearchRowBasic;
 import com.netsuite.webservices.platform.core_2010_2.SearchRow;
-
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**

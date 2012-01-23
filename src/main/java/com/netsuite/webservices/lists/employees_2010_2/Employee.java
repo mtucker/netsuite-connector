@@ -11,6 +11,14 @@
 
 package com.netsuite.webservices.lists.employees_2010_2;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
 import com.netsuite.webservices.lists.employees_2010_2.types.EmployeeCommissionPaymentPreference;
 import com.netsuite.webservices.lists.employees_2010_2.types.EmployeePayFrequency;
 import com.netsuite.webservices.lists.employees_2010_2.types.EmployeeUseTimeData;
@@ -19,14 +27,6 @@ import com.netsuite.webservices.platform.common_2010_2.types.GlobalSubscriptionS
 import com.netsuite.webservices.platform.core_2010_2.CustomFieldList;
 import com.netsuite.webservices.platform.core_2010_2.Record;
 import com.netsuite.webservices.platform.core_2010_2.RecordRef;
-
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
