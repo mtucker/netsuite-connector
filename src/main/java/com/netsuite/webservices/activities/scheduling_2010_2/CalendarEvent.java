@@ -11,6 +11,13 @@
 
 package com.netsuite.webservices.activities.scheduling_2010_2;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
 import com.netsuite.webservices.activities.scheduling_2010_2.types.CalendarEventAccessLevel;
 import com.netsuite.webservices.activities.scheduling_2010_2.types.CalendarEventDow;
 import com.netsuite.webservices.activities.scheduling_2010_2.types.CalendarEventDowim;
@@ -20,13 +27,6 @@ import com.netsuite.webservices.activities.scheduling_2010_2.types.CalendarEvent
 import com.netsuite.webservices.platform.core_2010_2.CustomFieldList;
 import com.netsuite.webservices.platform.core_2010_2.Record;
 import com.netsuite.webservices.platform.core_2010_2.RecordRef;
-
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**

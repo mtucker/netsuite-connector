@@ -11,15 +11,15 @@
 
 package com.netsuite.webservices.platform.core_2010_2;
 
-import com.netsuite.webservices.platform.core_2010_2.types.SearchDate;
-import com.netsuite.webservices.platform.core_2010_2.types.SearchDateFieldOperator;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+
+import com.netsuite.webservices.platform.core_2010_2.types.SearchDate;
+import com.netsuite.webservices.platform.core_2010_2.types.SearchDateFieldOperator;
 
 
 /**

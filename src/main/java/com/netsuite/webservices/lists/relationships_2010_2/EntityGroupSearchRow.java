@@ -14,6 +14,7 @@ package com.netsuite.webservices.lists.relationships_2010_2;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+
 import com.netsuite.webservices.platform.common_2010_2.EmployeeSearchRowBasic;
 import com.netsuite.webservices.platform.common_2010_2.EntityGroupSearchRowBasic;
 import com.netsuite.webservices.platform.common_2010_2.EntitySearchRowBasic;

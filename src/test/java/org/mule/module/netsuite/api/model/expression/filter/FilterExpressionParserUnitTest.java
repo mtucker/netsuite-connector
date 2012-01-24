@@ -10,23 +10,7 @@
 
 package org.mule.module.netsuite.api.model.expression.filter;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertTrue;
-
-import com.netsuite.webservices.documents.filecabinet_2010_2.FolderSearch;
-import com.netsuite.webservices.lists.employees_2010_2.EmployeeSearch;
-import com.netsuite.webservices.lists.relationships_2010_2.CustomerSearch;
-import com.netsuite.webservices.platform.common_2010_2.CustomerSearchBasic;
-import com.netsuite.webservices.platform.core_2010_2.RecordRef;
-import com.netsuite.webservices.platform.core_2010_2.SearchRecord;
-import com.netsuite.webservices.platform.core_2010_2.types.SearchEnumMultiSelectFieldOperator;
-import com.netsuite.webservices.platform.core_2010_2.types.SearchLongFieldOperator;
-import com.netsuite.webservices.platform.core_2010_2.types.SearchMultiSelectFieldOperator;
-import com.netsuite.webservices.platform.core_2010_2.types.SearchRecordType;
+import static org.junit.Assert.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -35,6 +19,16 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.mule.module.netsuite.api.model.expression.filter.parser.FilterExpressionParser;
+
+import com.netsuite.webservices.documents.filecabinet_2010_2.FolderSearch;
+import com.netsuite.webservices.lists.employees_2010_2.EmployeeSearch;
+import com.netsuite.webservices.lists.relationships_2010_2.CustomerSearch;
+import com.netsuite.webservices.platform.core_2010_2.RecordRef;
+import com.netsuite.webservices.platform.core_2010_2.SearchRecord;
+import com.netsuite.webservices.platform.core_2010_2.types.SearchEnumMultiSelectFieldOperator;
+import com.netsuite.webservices.platform.core_2010_2.types.SearchLongFieldOperator;
+import com.netsuite.webservices.platform.core_2010_2.types.SearchMultiSelectFieldOperator;
+import com.netsuite.webservices.platform.core_2010_2.types.SearchRecordType;
 
 /**
  * Test for {@link FilterExpressionParser}

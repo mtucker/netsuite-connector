@@ -10,14 +10,8 @@
 
 package org.mule.module.netsuite.api;
 
-import static org.junit.Assert.assertSame;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-
-import com.netsuite.webservices.platform.core_2010_2.GetServerTimeResult;
-import com.netsuite.webservices.platform.core_2010_2.Status;
-import com.netsuite.webservices.platform.core_2010_2.StatusDetail;
-import com.netsuite.webservices.platform.messages_2010_2.GetServerTimeResponse;
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
 
 import java.util.Collections;
 import java.util.List;
@@ -28,6 +22,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import com.netsuite.webservices.platform.core_2010_2.GetServerTimeResult;
+import com.netsuite.webservices.platform.core_2010_2.Status;
+import com.netsuite.webservices.platform.core_2010_2.StatusDetail;
+import com.netsuite.webservices.platform.messages_2010_2.GetServerTimeResponse;
 
 /**
  * Test for {@link NetSuiteClientAdaptor}

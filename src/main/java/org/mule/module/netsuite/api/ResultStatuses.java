@@ -10,10 +10,10 @@
 
 package org.mule.module.netsuite.api;
 
-import com.netsuite.webservices.platform.core_2010_2.Status;
-
 import org.apache.commons.beanutils.PropertyUtils;
 import org.apache.commons.lang.builder.ToStringBuilder;
+
+import com.netsuite.webservices.platform.core_2010_2.Status;
 
 public final class ResultStatuses
 {

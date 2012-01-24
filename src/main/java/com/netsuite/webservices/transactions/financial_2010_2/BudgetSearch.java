@@ -11,12 +11,12 @@
 
 package com.netsuite.webservices.transactions.financial_2010_2;
 
-import com.netsuite.webservices.platform.common_2010_2.BudgetSearchBasic;
-import com.netsuite.webservices.platform.core_2010_2.SearchRecord;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+
+import com.netsuite.webservices.platform.common_2010_2.BudgetSearchBasic;
+import com.netsuite.webservices.platform.core_2010_2.SearchRecord;
 
 
 /**

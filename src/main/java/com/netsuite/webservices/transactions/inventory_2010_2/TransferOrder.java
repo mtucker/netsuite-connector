@@ -11,12 +11,6 @@
 
 package com.netsuite.webservices.transactions.inventory_2010_2;
 
-import com.netsuite.webservices.platform.common_2010_2.ShipAddress;
-import com.netsuite.webservices.platform.core_2010_2.CustomFieldList;
-import com.netsuite.webservices.platform.core_2010_2.Record;
-import com.netsuite.webservices.platform.core_2010_2.RecordRef;
-import com.netsuite.webservices.transactions.inventory_2010_2.types.TransferOrderOrderStatus;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -24,6 +18,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+
+import com.netsuite.webservices.platform.common_2010_2.ShipAddress;
+import com.netsuite.webservices.platform.core_2010_2.CustomFieldList;
+import com.netsuite.webservices.platform.core_2010_2.Record;
+import com.netsuite.webservices.platform.core_2010_2.RecordRef;
+import com.netsuite.webservices.transactions.inventory_2010_2.types.TransferOrderOrderStatus;
 
 
 /**

@@ -11,6 +11,11 @@
 
 package com.netsuite.webservices.platform.common_2010_2;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
 import com.netsuite.webservices.platform.common_2010_2.types.PostingPeriodDate;
 import com.netsuite.webservices.platform.core_2010_2.RecordRef;
 import com.netsuite.webservices.platform.core_2010_2.SearchBooleanField;
@@ -22,11 +27,6 @@ import com.netsuite.webservices.platform.core_2010_2.SearchLongField;
 import com.netsuite.webservices.platform.core_2010_2.SearchMultiSelectField;
 import com.netsuite.webservices.platform.core_2010_2.SearchRecord;
 import com.netsuite.webservices.platform.core_2010_2.SearchStringField;
-
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**

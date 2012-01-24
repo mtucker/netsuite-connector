@@ -11,13 +11,13 @@
 
 package com.netsuite.webservices.lists.accounting_2010_2;
 
-import com.netsuite.webservices.platform.common_2010_2.CustomerCategorySearchRowBasic;
-import com.netsuite.webservices.platform.common_2010_2.EmployeeSearchRowBasic;
-import com.netsuite.webservices.platform.core_2010_2.SearchRow;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+
+import com.netsuite.webservices.platform.common_2010_2.CustomerCategorySearchRowBasic;
+import com.netsuite.webservices.platform.common_2010_2.EmployeeSearchRowBasic;
+import com.netsuite.webservices.platform.core_2010_2.SearchRow;
 
 
 /**

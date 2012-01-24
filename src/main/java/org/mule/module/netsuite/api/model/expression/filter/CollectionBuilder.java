@@ -10,12 +10,12 @@
 
 package org.mule.module.netsuite.api.model.expression.filter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.mule.module.netsuite.api.model.expression.Quotes;
 
 import com.netsuite.webservices.platform.core_2010_2.RecordRef;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class CollectionBuilder
 {

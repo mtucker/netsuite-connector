@@ -11,8 +11,6 @@
 
 package com.netsuite.webservices.general.communication_2010_2;
 
-import com.netsuite.webservices.documents.filecabinet_2010_2.File;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +19,8 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+
+import com.netsuite.webservices.documents.filecabinet_2010_2.File;
 
 
 /**

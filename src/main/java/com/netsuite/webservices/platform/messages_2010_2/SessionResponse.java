@@ -11,14 +11,14 @@
 
 package com.netsuite.webservices.platform.messages_2010_2;
 
-import com.netsuite.webservices.platform.core_2010_2.RecordRef;
-import com.netsuite.webservices.platform.core_2010_2.Status;
-import com.netsuite.webservices.platform.core_2010_2.WsRoleList;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+
+import com.netsuite.webservices.platform.core_2010_2.RecordRef;
+import com.netsuite.webservices.platform.core_2010_2.Status;
+import com.netsuite.webservices.platform.core_2010_2.WsRoleList;
 
 
 /**

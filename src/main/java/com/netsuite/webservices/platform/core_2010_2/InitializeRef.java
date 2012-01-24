@@ -11,14 +11,14 @@
 
 package com.netsuite.webservices.platform.core_2010_2;
 
-import org.mule.module.netsuite.api.model.entity.NetsuiteReference;
-
-import com.netsuite.webservices.platform.core_2010_2.types.InitializeRefType;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
+
+import org.mule.module.netsuite.api.model.entity.NetsuiteReference;
+
+import com.netsuite.webservices.platform.core_2010_2.types.InitializeRefType;
 
 
 /**

@@ -16,12 +16,11 @@ import java.util.Date;
 import java.util.HashMap;
 
 import org.junit.Test;
-import org.mule.modules.utils.mom.CxfMapObjectMappers;
-
-import ar.com.zauber.commons.mom.MapObjectMapper;
+import org.mule.modules.utils.mom.JaxbMapObjectMappers;
 
 import com.netsuite.webservices.activities.scheduling_2010_2.CalendarEvent;
 import com.netsuite.webservices.platform.core_2010_2.types.RecordType;
+import com.zauberlabs.commons.mom.MapObjectMapper;
 
 /**
  * Test for {@link MapToRecordConverter}
@@ -31,7 +30,7 @@ import com.netsuite.webservices.platform.core_2010_2.types.RecordType;
 @SuppressWarnings("serial")
 public class MapToRecordConverterUnitTest
 {
-    private final MapObjectMapper mom = CxfMapObjectMappers.defaultWithPackage("com.netsuite.webservices").build();
+    private final MapObjectMapper mom = JaxbMapObjectMappers.defaultWithPackage("com.netsuite.webservices").build();
     
     /**
      * Test that a map can be converted into record, applying attribute conversions

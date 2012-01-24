@@ -11,14 +11,6 @@
 
 package com.netsuite.webservices.transactions.sales_2010_2;
 
-import com.netsuite.webservices.platform.common_2010_2.BillAddress;
-import com.netsuite.webservices.platform.common_2010_2.ShipAddress;
-import com.netsuite.webservices.platform.common_2010_2.types.AvsMatchCode;
-import com.netsuite.webservices.platform.common_2010_2.types.RevenueStatus;
-import com.netsuite.webservices.platform.core_2010_2.CustomFieldList;
-import com.netsuite.webservices.platform.core_2010_2.Record;
-import com.netsuite.webservices.platform.core_2010_2.RecordRef;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -26,6 +18,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+
+import com.netsuite.webservices.platform.common_2010_2.BillAddress;
+import com.netsuite.webservices.platform.common_2010_2.ShipAddress;
+import com.netsuite.webservices.platform.common_2010_2.types.AvsMatchCode;
+import com.netsuite.webservices.platform.common_2010_2.types.RevenueStatus;
+import com.netsuite.webservices.platform.core_2010_2.CustomFieldList;
+import com.netsuite.webservices.platform.core_2010_2.Record;
+import com.netsuite.webservices.platform.core_2010_2.RecordRef;
 
 
 /**

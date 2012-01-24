@@ -10,24 +10,7 @@
 
 package org.mule.module.netsuite;
 
-import static org.mule.module.netsuite.RecordReferences.from;
-import static org.mule.module.netsuite.RecordReferences.nulSafeFrom;
-
-import org.mule.api.annotations.Configurable;
-import org.mule.api.annotations.Module;
-import org.mule.api.annotations.Processor;
-import org.mule.api.annotations.param.Default;
-import org.mule.api.annotations.param.Optional;
-import org.mule.module.netsuite.api.CxfNetSuiteClient;
-import org.mule.module.netsuite.api.DefaultCxfPortProvider;
-import org.mule.module.netsuite.api.NetSuiteClient;
-import org.mule.module.netsuite.api.NetSuiteClientAdaptor;
-import org.mule.module.netsuite.api.model.expression.date.SimpleDateExpression;
-import org.mule.module.netsuite.api.model.expression.date.StringDateExpression;
-
-import com.netsuite.webservices.platform.core_2010_2.AsyncStatusResult;
-import com.netsuite.webservices.platform.core_2010_2.Record;
-import com.netsuite.webservices.platform.core_2010_2.RecordRef;
+import static org.mule.module.netsuite.RecordReferences.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -43,6 +26,21 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
+import org.mule.api.annotations.Configurable;
+import org.mule.api.annotations.Module;
+import org.mule.api.annotations.Processor;
+import org.mule.api.annotations.param.Default;
+import org.mule.api.annotations.param.Optional;
+import org.mule.module.netsuite.api.CxfNetSuiteClient;
+import org.mule.module.netsuite.api.DefaultCxfPortProvider;
+import org.mule.module.netsuite.api.NetSuiteClient;
+import org.mule.module.netsuite.api.NetSuiteClientAdaptor;
+import org.mule.module.netsuite.api.model.expression.date.SimpleDateExpression;
+import org.mule.module.netsuite.api.model.expression.date.StringDateExpression;
+
+import com.netsuite.webservices.platform.core_2010_2.AsyncStatusResult;
+import com.netsuite.webservices.platform.core_2010_2.Record;
+import com.netsuite.webservices.platform.core_2010_2.RecordRef;
 
 /**
  * The NetSuite cloud connector facade, based on a {@link NetSuiteClient}

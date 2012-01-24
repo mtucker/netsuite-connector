@@ -11,11 +11,11 @@
 
 package com.netsuite.webservices.lists.accounting_2010_2;
 
-import com.netsuite.webservices.platform.core_2010_2.Duration;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+
+import com.netsuite.webservices.platform.core_2010_2.Duration;
 
 
 /**

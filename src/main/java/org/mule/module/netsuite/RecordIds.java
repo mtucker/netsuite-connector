@@ -10,11 +10,10 @@
 
 package org.mule.module.netsuite;
 
-import org.mule.module.netsuite.api.model.entity.RecordId;
-
 import javax.validation.constraints.NotNull;
 
 import org.apache.commons.lang.Validate;
+import org.mule.module.netsuite.api.model.entity.RecordId;
 
 public final class RecordIds
 {

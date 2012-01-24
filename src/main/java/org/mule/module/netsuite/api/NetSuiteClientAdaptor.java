@@ -10,15 +10,14 @@
 
 package org.mule.module.netsuite.api;
 
-import org.mule.module.netsuite.NetSuiteCloudConnector;
-import org.mule.module.netsuite.api.annotation.NetSuiteOperation;
-
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.List;
 
+import org.mule.module.netsuite.NetSuiteCloudConnector;
+import org.mule.module.netsuite.api.annotation.NetSuiteOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.AnnotationUtils;

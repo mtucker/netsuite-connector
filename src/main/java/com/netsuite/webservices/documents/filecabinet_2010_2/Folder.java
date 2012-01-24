@@ -11,14 +11,14 @@
 
 package com.netsuite.webservices.documents.filecabinet_2010_2;
 
-import com.netsuite.webservices.platform.core_2010_2.Record;
-import com.netsuite.webservices.platform.core_2010_2.RecordRef;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+
+import com.netsuite.webservices.platform.core_2010_2.Record;
+import com.netsuite.webservices.platform.core_2010_2.RecordRef;
 
 
 /**
