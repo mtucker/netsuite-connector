@@ -18,7 +18,7 @@
     <properties>
         <cxf.version>2.3.0</cxf.version>
         <mule.module.utils.version>1.0</mule.module.utils.version>
-        <sonar.exclusions>com/netsuite/webservices/**,org/mule/module/netsuite/config/**,org/mule/module/netsuite/api/model/expression/**/parser</sonar.exclusions>
+        <sonar.exclusions>com/netsuite/webservices/**/*.java,org/mule/module/netsuite/config/**/*.java,org/mule/module/netsuite/api/model/expression/**/parser/*.java</sonar.exclusions>
     </properties>
 
     <build>
