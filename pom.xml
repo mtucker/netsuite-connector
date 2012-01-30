@@ -16,9 +16,10 @@
     <url>http://www.muleforge.org/projects/mule-module-netsuite</url>
 
     <properties>
-        <cxf.version>2.3.0</cxf.version>
+        <cxf.version>2.5.1</cxf.version>
         <mule.module.utils.version>1.0</mule.module.utils.version>
         <sonar.exclusions>com/netsuite/webservices/**/*.java,org/mule/module/netsuite/config/**/*.java,org/mule/module/netsuite/api/model/expression/**/parser/*.java</sonar.exclusions>
+        <commons.ws.version>1.0.1</commons.ws.version>
     </properties>
 
     <build>
@@ -38,15 +39,14 @@
             </plugin>
         </plugins>
     </build>
-
-
+    
+    
     <dependencies>
         <!-- CXF -->
         <dependency>
-            <groupId>org.mule.modules</groupId>
-            <artifactId>mule-module-cxf</artifactId>
-            <version>${mule.version}</version>
-            <scope>provided</scope>
+          <groupId>com.zaubersoftware</groupId>
+          <artifactId>commons-ws</artifactId>
+          <version>${commons.ws.version}</version>
         </dependency>
         
         <dependency>
