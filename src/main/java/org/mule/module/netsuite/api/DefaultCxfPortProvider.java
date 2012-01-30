@@ -16,14 +16,13 @@ import javax.validation.constraints.NotNull;
 import javax.xml.ws.BindingProvider;
 
 import org.apache.commons.lang.Validate;
-import org.apache.cxf.interceptor.LoggingInInterceptor;
-import org.apache.cxf.interceptor.LoggingOutInterceptor;
-import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 
 import com.netsuite.webservices.platform.core_2010_2.Passport;
 import com.netsuite.webservices.platform.core_2010_2.RecordRef;
 import com.netsuite.webservices.platform.messages_2010_2.LoginRequest;
 import com.netsuite.webservices.platform_2010_2.NetSuitePortType;
+import com.netsuite.webservices.platform_2010_2.NetSuiteService;
+import com.zauberlabs.commons.ws.connection.ConnectionBuilder;
 
 public class DefaultCxfPortProvider implements CxfPortProvider
 {
@@ -35,7 +34,7 @@ public class DefaultCxfPortProvider implements CxfPortProvider
 
     /**
      * Creates the port provider
-     * 
+     *
      * @param address
      * @param email
      * @param password
@@ -60,22 +59,13 @@ public class DefaultCxfPortProvider implements CxfPortProvider
         this.roleId = roleId;
     }
 
-    @SuppressWarnings("unchecked")
-    private JaxWsProxyFactoryBean getProxyFactory(final Class clazz, final String address)
-    {
-        final JaxWsProxyFactoryBean ret = new JaxWsProxyFactoryBean();
-        ret.getInInterceptors().add(new LoggingInInterceptor());
-        ret.getOutInterceptors().add(new LoggingOutInterceptor());
-        ret.setServiceClass(clazz);
-        ret.setAddress(address);
-        return ret;
-    }
-
     public NetSuitePortType getPort() throws RemoteException
     {
-        final JaxWsProxyFactoryBean factory = getProxyFactory(NetSuitePortType.class, address);
-
-        return (NetSuitePortType) factory.create();
+        return ConnectionBuilder.fromPortType(NetSuitePortType.class)
+            .withServiceType(NetSuiteService.class)
+            .withClasspathWsdl("netsuite.wsdl")
+            .withEndpoint(address)
+            .build();
     }
 
     public NetSuitePortType getAuthenticatedPort() throws Exception
